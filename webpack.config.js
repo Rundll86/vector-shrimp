@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: "./src/index.ts",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist/front"),
         filename: "app.js",
         clean: true,
     },
@@ -60,7 +60,6 @@ module.exports = {
         setupExitSignals: false,
         client: {
             logging: "none"
-        },
-        open: true
+        }
     }
 };

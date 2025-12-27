@@ -17,10 +17,12 @@
         ]
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "desktop/**/*"
     ],
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
+        "src"
     ]
 }

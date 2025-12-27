@@ -1,37 +1,46 @@
 {
-  "name": "vector-shrimp",
-  "version": "1.0.0",
-  "description": "更好的 米哈游启动器。",
-  "scripts": {
-    "dev": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "lint": "eslint . --fix"
-  },
-  "author": "陨落基围虾",
-  "license": "MIT",
-  "dependencies": {
-    "electron": "^39.2.7"
-  },
-  "devDependencies": {
-    "@types/node": "^25.0.3",
-    "@types/webpack-env": "^1.18.8",
-    "css-loader": "^7.1.2",
-    "eslint": "^9.39.2",
-    "eslint-plugin-vue": "^10.6.2",
-    "globals": "^16.5.0",
-    "html-webpack-loader": "^0.0.5",
-    "html-webpack-plugin": "^5.6.5",
-    "ts-loader": "^9.5.4",
-    "tsc": "^2.0.4",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.1",
-    "vue": "^3.5.26",
-    "vue-eslint-parser": "^10.2.0",
-    "vue-loader": "^17.4.2",
-    "vue-style-loader": "^4.1.3",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2",
-    "webpackbar": "^7.0.0"
-  }
+    "name": "vector-shrimp",
+    "version": "1.0.0",
+    "description": "更好的 米哈游启动器。",
+    "main": "dist/main.js",
+    "scripts": {
+        "dev": "run-p dev:*",
+        "build": "run-p build:*",
+        "dev:back": "vue-tsc --watch",
+        "build:back": "vue-tsc",
+        "dev:front": "webpack serve --mode development",
+        "build:front": "webpack --mode production",
+        "lint": "eslint . --fix",
+        "start": "electron ."
+    },
+    "author": "陨落基围虾",
+    "license": "MIT",
+    "dependencies": {
+        "electron": "^39.2.7",
+        "npm-run-all": "^4.1.5"
+    },
+    "devDependencies": {
+        "@types/node": "^25.0.3",
+        "@types/webpack-env": "^1.18.8",
+        "css-loader": "^7.1.2",
+        "eslint": "^9.39.2",
+        "eslint-plugin-vue": "^10.6.2",
+        "globals": "^16.5.0",
+        "html-webpack-loader": "^0.0.5",
+        "html-webpack-plugin": "^5.6.5",
+        "npm-run-all": "^4.1.5",
+        "ts-loader": "^9.5.4",
+        "tsc": "^2.0.4",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.50.1",
+        "vue": "^3.5.26",
+        "vue-eslint-parser": "^10.2.0",
+        "vue-loader": "^17.4.2",
+        "vue-style-loader": "^4.1.3",
+        "vue-tsc": "^3.2.1",
+        "webpack": "^5.104.1",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.2",
+        "webpackbar": "^7.0.0"
+    }
 }
