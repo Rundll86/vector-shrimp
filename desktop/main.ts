@@ -39,3 +39,8 @@ ipcMain.on("minimize-window", () => {
         window.minimize();
     });
 });
+ipcMain.on("toggle-dev-tools", () => {
+    BrowserWindow.getAllWindows().forEach((window) => {
+        window.webContents.toggleDevTools();
+    });
+});

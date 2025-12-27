@@ -2,7 +2,7 @@
     "name": "vector-shrimp",
     "version": "1.0.0",
     "description": "更好的 米哈游启动器。",
-    "main": "dist/main.js",
+    "main": "dist/desktop/main.js",
     "scripts": {
         "dev": "run-p dev:*",
         "build": "run-p build:*",
@@ -31,7 +31,6 @@
         "npm-run-all": "^4.1.5",
         "ts-loader": "^9.5.4",
         "tsc": "^2.0.4",
-        "typescript": "^5.9.3",
         "typescript-eslint": "^8.50.1",
         "vue": "^3.5.26",
         "vue-eslint-parser": "^10.2.0",

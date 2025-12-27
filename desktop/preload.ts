@@ -6,3 +6,6 @@ contextBridge.exposeInMainWorld("closeWindow", () => {
 contextBridge.exposeInMainWorld("minimizeWindow", () => {
     ipcRenderer.send("minimize-window");
 });
+contextBridge.exposeInMainWorld("toggleDevTools", () => {
+    ipcRenderer.send("toggle-dev-tools");
+});

@@ -1,20 +1,26 @@
 <script setup lang="ts">
-import BlockButton from "../common/BlockButton.vue";
-import Logo from "../common/Logo.vue";
+import BlockButton from "../../common/BlockButton.vue";
+import Logo from "../../common/LogoImage.vue";
+import GameIcon from "./GameIcon.vue";
 
-function minimizeWindow() {
+function min() {
     window.minimizeWindow();
 }
-function closeWindow() {
+function clo() {
     window.closeWindow();
 }
 </script>
 <template>
     <div class="navbar">
         <Logo />
+        <div class="games">
+            <GameIcon game-type="ys" />
+            <GameIcon game-type="zzz" />
+            <GameIcon game-type="sr" />
+        </div>
         <div class="controls">
-            <BlockButton @click="minimizeWindow">-</BlockButton>
-            <BlockButton @click="closeWindow">×</BlockButton>
+            <BlockButton @click="min">-</BlockButton>
+            <BlockButton @click="clo">×</BlockButton>
         </div>
     </div>
 </template>
@@ -28,6 +34,7 @@ function closeWindow() {
     align-items: center;
 }
 
+.games,
 .controls {
     margin-top: auto;
     display: flex;
