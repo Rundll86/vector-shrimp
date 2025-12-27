@@ -6,5 +6,6 @@
     --size: 40px;
     width: var(--size);
     height: var(--size);
+    padding: 5px;
 }
 </style>

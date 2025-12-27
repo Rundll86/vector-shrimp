@@ -1,4 +1,4 @@
-import { app } from "electron";
+import { app, ipcMain } from "electron";
 import { BrowserWindow } from "electron";
 import { Menu } from "electron/main";
 import path from "path";
@@ -28,4 +28,14 @@ app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
         app.quit();
     }
+});
+ipcMain.on("close-window", () => {
+    BrowserWindow.getAllWindows().forEach((window) => {
+        window.close();
+    });
+});
+ipcMain.on("minimize-window", () => {
+    BrowserWindow.getAllWindows().forEach((window) => {
+        window.minimize();
+    });
 });

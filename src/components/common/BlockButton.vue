@@ -11,7 +11,7 @@
     background-color: transparent;
     border-radius: 5px;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 
